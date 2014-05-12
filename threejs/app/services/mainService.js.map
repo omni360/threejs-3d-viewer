@@ -1,0 +1,1 @@
+{"version":3,"file":"mainService.js","sourceRoot":"","sources":["mainService.ts"],"names":["MainService","MainService.constructor"],"mappings":"AAAA,WAAW,CAAC,OAAO,CAAC,aAAa,EAAE;IAC/B,OAAO,EAAE,UAAC,KAAK;eAAK,IAAI,WAAW,CAAC,KAAK,CAAC;IAAtB,CAAsB;CAC7C,CAAC;;AAEF;IACIA,qBAAYA,KAA8BA;QAA9BC,UAAaA,GAALA,KAAKA;AAAiBA,IAE1CA,CAACA;IAKLD,mBAACA;AAADA,CAACA,IAAA"}

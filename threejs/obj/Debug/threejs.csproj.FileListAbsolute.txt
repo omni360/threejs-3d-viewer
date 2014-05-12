@@ -1,0 +1,6 @@
+D:\vs\threejs\threejs\bin\threejs.dll.config
+D:\vs\threejs\threejs\bin\threejs.dll
+D:\vs\threejs\threejs\bin\threejs.pdb
+D:\vs\threejs\threejs\obj\Debug\threejs.csprojResolveAssemblyReference.cache
+D:\vs\threejs\threejs\obj\Debug\threejs.dll
+D:\vs\threejs\threejs\obj\Debug\threejs.pdb
