@@ -2,9 +2,5 @@
   "name": "sample",
   "version": "0.0.0",
   "dependencies": {
-    "bootstrap": "~3.1.1",
-    "angular": "~1.2.16",
-    "stats.js": "*",
-    "threejs": "*"
   }
 }

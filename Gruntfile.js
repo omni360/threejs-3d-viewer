@@ -1,17 +1,23 @@
 module.exports = function (grunt) {
-    grunt.loadNpmTasks('grunt-typescript');
+    grunt.loadNpmTasks('grunt-ts');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.initConfig({
-        typescript: {
+        ts: {
             app: {
-                src: ['app/scripts/app.ts'],
-                dest: 'build/js/app.js',
-                options: {
-                    sourceMap: true
+                src: ['app/app/app.ts'],
+                out: 'build/scripts/script.js',
+                reference: "app/app/_references.ts"
+            }
+        },
+        less: {
+            app: {
+                files: {
+                    "build/styles/style.css": "app/styles/style.less"
                 }
             }
         },
@@ -21,9 +27,14 @@ module.exports = function (grunt) {
                     {
                         cwd: 'app',
                         expand: true,
-                        src: ['**/*.html', 'assets/**/*'],
+                        src: ['**/*.html', 'assets/**/*', 'scripts/**/*'],
                         dest: 'build/'
                     }
+                ]
+            },
+            bower: {
+                files: [
+                    {}
                 ]
             }
         },
@@ -44,7 +55,7 @@ module.exports = function (grunt) {
         watch: {
             app: {
                 files: 'app/**/*',
-                tasks: ['typescript', 'copy'],
+                tasks: ['ts', 'less', 'copy'],
                 options: {
                     livereload: true
                 }
@@ -52,5 +63,5 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('default', ['typescript', 'copy', 'open', 'connect', 'watch']);
+    grunt.registerTask('default', ['ts', 'less', 'copy', 'open', 'connect', 'watch']);
 }
