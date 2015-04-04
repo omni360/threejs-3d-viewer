@@ -63,5 +63,6 @@ module.exports = function (grunt) {
         }
     });
 
+	grunt.registerTask('build', ['ts', 'less', 'copy']);
     grunt.registerTask('default', ['ts', 'less', 'copy', 'open', 'connect', 'watch']);
 }
